@@ -5,45 +5,60 @@ Spyder Editor
 This is a temporary script file.
 """
 
+
 def main():
-    with open("myfile1.txt", "w+") as file:
-        while True:
-            file.write(str(getTemperatureMoniter()))        # writes a string to a file
-            file.write(str(getHumidityMoniter()))
-            file.write(str(getInventoryCount()))
-            file.write(str(getLocation()))
-            file.write(str(copylogs()))
-            file.write(str(fileuploader()))
-            file.write(str(encryption()))
-            
+    with open("writes.txt", "w+") as file:
+
+        with open('reads.txt', "r+") as reads:
+            contents = reads.read()
+            while True:
+
+        # writes a string to a file
+                file.write(str(getTemperatureMoniter()))
+                file.write(str(getHumidityMoniter()))
+                file.write(str(getInventoryCount()))
+                file.write(str(getLocation()))
+                file.write(str(copylogs()))
+                file.write(str(fileuploader()))
+                file.write(str(encryption()))
+
+
 def getTemperatureMoniter():
-    temp = input("Gathering current temperature");
+    temp = input("Gathering current temperature")
     print("current temperature" + temp)
     return temp
+
 
 def getHumidityMoniter():
-    temp = input("Gathering current temperature");
-    print("current temperature" + temp)
-    return temp
+    humidity = input("Humidity %")
+    print("current temperature" + humidity)
+    return humidity
+
+
 def getInventoryCount():
-    temp = input("Gathering current temperature");
-    print("current temperature" + temp)
-    return temp
-    
+    inventory = input("Gathering current temperature")
+    print("current temperature" + inventory)
+    return inventory
+
+
 def getLocation():
-    temp = input("Gathering current temperature");
-    print("current temperature" + temp)
-    return temp
+    location = input("Gathering current temperature")
+    print("current temperature" + location)
+    return location
+
+
 def copylogs():
-    temp = input("Gathering current temperature");
-    print("current temperature" + temp)
-    return temp
+    copy = input("Gathering current temperature")
+    return
+
 
 def fileuploader():
-    temp = input("Gathering current temperature");
+    temp = input("Gathering current temperature")
     print("current temperature" + temp)
-    return 
+    return
+
+
 def encryption():
-    temp = input("Gathering current temperature");
+    temp = input("Gathering current temperature")
     print("current temperature" + temp)
     return temp
